@@ -1,0 +1,315 @@
+<div class="wrapper">
+  <!-- ==========================
+        contact layout 3
+    =========================== -->
+  <section
+    class="contact-layout3 bg-overlay bg-overlay-primary-gradient pb-60 bg-img"
+    style="
+      background-image: url(assets/images/backgrounds/2.jpg);
+      background-size: cover;
+      background-position: center center;
+    "
+  >
+    <!-- <div class="bg-img"><img src="assets/images/banners/3.jpg" alt="banner"></div> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-7">
+          <div class="contact-panel mb-50">
+            <form
+              [formGroup]="homeTouch"
+              class="contact-panel__form"
+              (ngSubmit)="onSubmit()"
+            >
+              <div class="row">
+                <div class="col-sm-12">
+                  <h4 class="contact-panel__title">Get In Touch</h4>
+                  <p class="contact-panel__desc mb-30">
+                    Please feel welcome to contact our friendly reception staff
+                    with any general or medical enquiry. Our doctors will
+                    receive or return any urgent calls.
+                  </p>
+                </div>
+
+                <!-- <div class="col-sm-6 col-md-6 col-lg-6">
+                  <div class="form-group">
+                    <i class="icon-news form-group-icon"></i>
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Name"
+                      name="contactName"
+                      formControlName="contactName"
+                    />
+                    <span style="color: red;" *ngIf = "contactName && contactName.invalid && contactName.touched">not required</span>
+                  </div>
+                </div> -->
+
+                <!-- /.col-lg-6 -->
+                <!-- <div class="col-sm-6 col-md-6 col-lg-6">
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email"
+                      name="email"
+                      formControlName="email"
+                    />
+                  </div>
+                </div> -->
+                <!-- /.col-lg-6 -->
+                <!-- <div class="col-sm-6 col-md-6 col-lg-6">
+                  <div class="form-group">
+                    <i class="icon-phone form-group-icon"></i>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Phone"
+                      name="phone"
+                      formControlName="phone"
+                    />
+                  </div>
+                </div> -->
+                <!-- /.col-lg-4 -->
+                <!-- <div class="col-sm-6 col-md-6 col-lg-6">
+                  <div class="form-group">
+                    <i class="icon-doctor form-group-icon"></i>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Treatment looking for"
+                      name="treatment"
+                      formControlName="treatment"
+                    />
+                  </div>
+                </div> -->
+                <!-- /.col-lg-4 -->
+                <!-- <div class="col-sm-12 col-md-12 col-lg-12">
+                  <div class="form-group">
+                    <input
+                      type="textarea"
+                      class="form-control"
+                      placeholder="Enter Your Message"
+                      name="report"
+                      formControlName="report"
+                    />
+                  </div>
+                </div> -->
+                <!-- /.col-lg-4 -->
+                <!-- <div class="col-sm-12 col-md-12 col-lg-12">
+                  <div class="form-group">
+                    <p>Upload Medical Reports</p>
+                    <input
+                      type="file"
+                      name="file"
+                      formControlName="file"
+                    />
+                  </div>
+                </div> -->
+                <!-- /.col-lg-4 -->
+                <!-- <div class="col-12">
+                  <button [disabled]="homeTouch.invalid"
+                    style="
+                      background-color: #3ebaec;
+                      border-radius: 50px;
+                      color: white;
+                      font-weight: 700;
+                      font-size: 15px;
+                      padding: 0%;
+                    "
+                    class="btn btn__secondary btn__rounded btn__block btn__xhight mt-10"
+                  >
+                    <span sty>Book Appointment</span>
+                    <i class="icon-arrow-right"></i>
+                  </button>
+                  <div class="contact-result"></div>
+                </div> -->
+                <!-- /.col-lg-12 -->
+              </div>
+              <!-- /.row -->
+              <div class="example-container">
+                <mat-form-field appearance="outline">
+                  <mat-label>Name</mat-label>
+                  <input
+                    matInput
+                    type="text"
+                    placeholder="Enter Your Name"
+                    formControlName="contactName"
+                  />
+                  <mat-error
+                    *ngIf="
+                      homeTouch.controls['contactName'].hasError('required')
+                    "
+                  >
+                    Name is required
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                  <mat-label>Email</mat-label>
+                  <input
+                    matInput
+                    type="text"
+                    placeholder="Enter Your Email"
+                    formControlName="email"
+                    pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
+                  />
+                  <mat-error
+                    *ngIf="
+                      homeTouch.get('email');
+                      hasError: 'required' &&
+                        homeTouch.get('email').hasError('email')
+                    "
+                    >Invalid email address</mat-error
+                  >
+
+                  <!-- <mat-error *ngIf="homeTouch.get('email').hasError('email')"
+                    >Please enter a valid email address
+                  </mat-error> -->
+                </mat-form-field>
+              </div>
+              <div class="example-container">
+                <mat-form-field appearance="outline">
+                  <mat-label>Phone</mat-label>
+                  <input
+                    matInput
+                    type="number"
+                    placeholder="Enter Your Phone"
+                    formControlName="phone"
+                  />
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                  <mat-label>Treatment</mat-label>
+                  <input
+                    matInput
+                    type="text"
+                    placeholder="Looking For"
+                    formControlName="treatment"
+                  />
+                </mat-form-field>
+              </div>
+              <div class="example-container">
+                <mat-form-field appearance="outline" class="example-full-width">
+                  <mat-label>Message</mat-label>
+                  <input
+                    matInput
+                    type="text"
+                    placeholder="Enter Your Message "
+                    formControlName="report"
+                  />
+                </mat-form-field>
+              </div>
+              <div class="example-container">
+                <p>Upload Medical Reports</p>
+                <input type="file" name="file" formControlName="file" />
+              </div>
+              <br />
+              <div class="row mt-2">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+                  <div class="example-button-row">
+                    <button
+                      mat-raised-button
+                      color="primary"
+                      [disabled]="!homeTouch.valid"
+                    >
+                      Book Appointment
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <!-- <form class="example-form">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Favorite food</mat-label>
+                <input matInput placeholder="Ex. Pizza" value="Sushi">
+              </mat-form-field>
+            
+              <mat-form-field class="example-half-width example-container" appearance="outline">
+                <mat-label>Leave a comment</mat-label>
+                <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+              </mat-form-field>
+              <mat-form-field class="example-half-width example-container" appearance="outline" >
+                <mat-label>Leave a comment</mat-label>
+                <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+              </mat-form-field>
+            </form> -->
+          </div>
+          <!-- <----White space khatam-- -->
+        </div>
+
+        <!-- /.col-lg-7 -->
+        <div class="col-sm-12 col-md-12 col-lg-5">
+          <div class="heading heading-light mb-30">
+            <h3 class="heading__title mb-30">
+              Helping Patients From Around the Globe!!
+            </h3>
+            <p class="heading__desc">
+              Our staff strives to make each interaction with patients clear,
+              concise, and inviting. Support the important work of Medicsh
+              Hospital by making a much-needed donation today.
+            </p>
+          </div>
+          <!-- <div class="d-flex align-items-center">
+                <a href="contact-us.html" class="btn btn__white btn__rounded mr-30">
+                  <i class="fas fa-heart"></i> <span>Make A Gift</span>
+                </a>
+                <a class="video__btn video__btn-white popup-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4">
+                  <div class="video__player">
+                    <i class="fa fa-play"></i>
+                  </div>
+                  <span class="video__btn-title color-white">Play Video</span>
+                </a>
+              </div> -->
+          <div class="text__block">
+            <p class="text__block-desc color-white font-weight-bold">
+              We provide a comprehensive range of plans for families and
+              individuals at every stage of life, with annual limits ranging
+              from £1.5m to unlimited.
+            </p>
+            <div class="sinature color-white">
+              <span class="font-weight-bold">Martin Qube</span
+              ><span>, Medcity Manager</span>
+            </div>
+          </div>
+          <!-- /.text__block -->
+          <!-- <div class="slick-carousel clients-light mt-20"
+                data-slick='{"slidesToShow": 3, "arrows": false, "dots": false, "autoplay": true,"autoplaySpeed": 2000, "infinite": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 3}}, {"breakpoint": 767, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 2}}]}'>
+                <div class="client">
+                  <img src="assets/images/clients/1.png" alt="client">
+                  <img src="assets/images/clients/1.png" alt="client">
+                </div>
+                <div class="client">
+                  <img src="assets/images/clients/2.png" alt="client">
+                  <img src="assets/images/clients/2.png" alt="client">
+                </div>
+                <div class="client">
+                  <img src="assets/images/clients/3.png" alt="client">
+                  <img src="assets/images/clients/3.png" alt="client">
+                </div>
+                <div class="client">
+                  <img src="assets/images/clients/4.png" alt="client">
+                  <img src="assets/images/clients/4.png" alt="client">
+                </div>
+                <div class="client">
+                  <img src="assets/images/clients/5.png" alt="client">
+                  <img src="assets/images/clients/5.png" alt="client">
+                </div>
+                <div class="client">
+                  <img src="assets/images/clients/6.png" alt="client">
+                  <img src="assets/images/clients/6.png" alt="client">
+                </div>
+                <div class="client">
+                  <img src="assets/images/clients/7.png" alt="client">
+                  <img src="assets/images/clients/7.png" alt="client">
+                </div>
+              </div> -->
+        </div>
+        <!-- /.col-lg-5 -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.contact layout 3 -->
+</div>

@@ -1,0 +1,190 @@
+<div class="wrapper">
+  <!-- =========================
+        Header
+    =========================== -->
+  <header class="header header-layout1">
+    <div class="header-topbar">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-12">
+            <div class="d-flex align-items-center justify-content-between">
+              <ul
+                class="contact__list d-flex flex-wrap align-items-center list-unstyled mb-0"
+              >
+                <li>
+                  <button class="miniPopup-emergency-trigger" type="button">
+                    Book Appointment
+                  </button>
+                  <div
+                    id="miniPopup-emergency"
+                    class="miniPopup miniPopup-emergency text-center"
+                  >
+                    <div class="emergency__icon">
+                      <i class="icon-call3"></i>
+                    </div>
+                    <a href="tel:+91 22 4236 4236" class="phone__number">
+                      <i class="icon-phone"></i> <span>+91 22 4236 4236</span>
+                    </a>
+                    <p>
+                      Please feel free to contact our friendly reception staff
+                      with any general or medical enquiry.
+                    </p>
+                    <a
+                      routerLink=""
+                      class="btn btn__secondary btn__link btn__block"
+                    >
+                      <span>Book Appointment</span>
+                      <i class="icon-arrow-right"></i>
+                    </a>
+                  </div>
+                  <!-- /.miniPopup-emergency -->
+                </li>
+                <li>
+                  <i class="icon-phone"></i
+                  ><a href="tel:+91+91 22 4236 4236"
+                    >Call Us : (+91) 22 4236 4236</a
+                  >
+                </li>
+                <li>
+                  <i class="icon-location"></i
+                  ><a href="#">Location Mumbai India.</a>
+                </li>
+              </ul>
+              <!-- /.contact__list -->
+              <div class="d-flex">
+                <ul class="social-icons list-unstyled mb-0 mr-30">
+                  <li>
+                    <a
+                      href="https://www.facebook.com/magnusmedi"
+                      target="_blank"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/magnusmedi/"
+                      target="_blank"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/company/magnusmedi-india/"
+                      target="_blank"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </li>
+                </ul>
+                <!-- /.social-icons -->
+                <!-- <form class="header-topbar__search">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <button class="header-topbar__search-btn"><i class="fa fa-search"></i></button>
+                  </form> -->
+              </div>
+            </div>
+          </div>
+          <!-- /.col-12 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.header-top -->
+    <nav class="navbar navbar-expand-lg sticky-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink="home">
+          <img
+            src="assets/images/logo/logo-light.png"
+            class="logo-light"
+            alt="logo"
+          />
+          <img
+            src="assets/images/logo/logo-dark.png"
+            class="logo-dark"
+            alt="logo"
+          />
+        </a>
+        <button class="navbar-toggler" type="button">
+          <span class="menu-lines"><span></span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavigation">
+          <ul class="navbar-nav ml-auto">
+            <ng-container *ngFor="let menu of navMenus">
+                <li class="nav-item {{menu.active ? 'active' : ''}}">
+              <a class="nav__item-link" href="{{menu.url}}"
+                >{{menu.text}}
+                <!-- <a class="nav__item-link" (click)="setActive('url')" href="{{menu.url}}"
+                >{{menu.text}} -->
+                <span *ngIf="menu.active" class="sr-only">(current)</span>
+              </a>
+            </li>
+        </ng-container>
+            <!-- /.nav-item -->
+          </ul>
+          <!-- /.navbar-nav -->
+          <button class="close-mobile-menu d-block d-lg-none">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <!-- /.navbar-collapse -->
+        <div
+          class="d-none d-xl-flex align-items-center position-relative ml-30"
+        >
+          <div class="miniPopup-departments-trigger">
+            <!-- <span class="menu-lines" id="miniPopup-departments-trigger-icon"><span></span></span> -->
+            <span class="menu-lines" id="miniPopup-departments-trigger-icon"
+              ><b style="margin-left: 35px; font-style: inherit">Departments</b
+              ><span></span
+            ></span>
+            <!-- <span id="miniPopup-departments-trigger-icon">Departments</span> -->
+          </div>
+          <ul
+            id="miniPopup-departments"
+            class="miniPopup miniPopup-departments dropdown-menu"
+          >
+            <li class="nav__item">
+              <a routerLink="" class="nav__item-link">Cancer</a>
+            </li>
+            <!-- /.nav-item -->
+            <li class="nav__item">
+              <a routerLink="" class="nav__item-link">Cardiology</a>
+            </li>
+            <!-- /.nav-item -->
+            <li class="nav__item">
+              <a routerLink="" class="nav__item-link">Transplants</a>
+            </li>
+            <!-- /.nav-item -->
+            <li class="nav__item">
+              <a routerLink="" class="nav__item-link">Neurology</a>
+            </li>
+            <!-- /.nav-item -->
+            <li class="nav__item">
+              <a routerLink="" class="nav__item-link">Orthopaedic</a>
+            </li>
+            <!-- /.nav-item -->
+            <li class="nav__item">
+              <a routerLink="" class="nav__item-link">Urology</a>
+            </li>
+            <!-- /.nav-item -->
+            <li class="nav__item">
+              <a routerLink="" class="nav__item-link">Gynaecology</a>
+            </li>
+            <!-- /.nav-item -->
+            <li class="nav__item">
+              <a routerLink="" class="nav__item-link">Spine Surgery</a>
+            </li>
+            <!-- /.nav-item -->
+          </ul>
+          <!-- /.miniPopup-departments -->
+          <!-- <a href="appointment.html" class="btn btn__primary btn__rounded ml-30">
+              <i class="icon-calendar"></i>
+              <span>Appointment</span>
+            </a> -->
+        </div>
+      </div>
+      <!-- /.container -->
+    </nav>
+    <!-- /.navabr -->
+  </header>
+  <!-- /.Header -->
+</div>
